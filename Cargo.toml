@@ -18,8 +18,10 @@ embassy = { version = "0.1.0", default-features = false, features = ["defmt"] }
 embassy-nrf = { version = "0.1.0", default-features = false, features = ["nrf52833", "time-driver-rtc1", "gpiote"]}
 futures = { version = "0.3", default-features = false }
 
+lsm303agr = "0.2.2"
+
 [patch.crates-io]
 embassy = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
 embassy-nrf = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
 embassy-hal-common = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
-drogue-device = { git = "https://github.com/drogue-iot/drogue-device.git", rev = "06c339c9223bf7fa8c55eea2b12ec323849bdc79" }
+drogue-device = { git = "https://github.com/drogue-iot/drogue-device.git", rev = "c0597a71b8bf1a69e825136789a8dc9f47eebb83" }

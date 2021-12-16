@@ -72,6 +72,7 @@ dependencies = [
  "embassy",
  "embassy-nrf",
  "futures",
+ "lsm303agr",
  "panic-probe",
 ]
 
@@ -248,7 +249,7 @@ dependencies = [
 [[package]]
 name = "drogue-device"
 version = "0.1.0"
-source = "git+https://github.com/drogue-iot/drogue-device.git?rev=06c339c9223bf7fa8c55eea2b12ec323849bdc79#06c339c9223bf7fa8c55eea2b12ec323849bdc79"
+source = "git+https://github.com/drogue-iot/drogue-device.git?rev=c0597a71b8bf1a69e825136789a8dc9f47eebb83#c0597a71b8bf1a69e825136789a8dc9f47eebb83"
 dependencies = [
  "atomic-polyfill",
  "base64",
@@ -267,7 +268,7 @@ dependencies = [
 [[package]]
 name = "drogue-device-macros"
 version = "0.1.0"
-source = "git+https://github.com/drogue-iot/drogue-device.git?rev=06c339c9223bf7fa8c55eea2b12ec323849bdc79#06c339c9223bf7fa8c55eea2b12ec323849bdc79"
+source = "git+https://github.com/drogue-iot/drogue-device.git?rev=c0597a71b8bf1a69e825136789a8dc9f47eebb83#c0597a71b8bf1a69e825136789a8dc9f47eebb83"
 dependencies = [
  "cfg-if",
  "config",
@@ -467,9 +468,9 @@ dependencies = [
 
 [[package]]
 name = "heapless"
-version = "0.7.8"
+version = "0.7.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c1ad878e07405df82b695089e63d278244344f80e764074d0bdfe99b89460f3"
+checksum = "7e476c64197665c3725621f0ac3f9e5209aa5e889e02a08b1daf5f16dc5fd952"
 dependencies = [
  "atomic-polyfill",
  "hash32",
@@ -521,6 +522,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "712a4d093c9976e24e7dbca41db895dabcbac38eb5f4045393d17a95bdfb1109"
 dependencies = [
  "scopeguard",
+]
+
+[[package]]
+name = "lsm303agr"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aab0b8c3a75dfdebe9f79c738458da139e8111207d176e9fb6b360117432ac4f"
+dependencies = [
+ "embedded-hal",
+ "nb 1.0.0",
 ]
 
 [[package]]

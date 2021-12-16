@@ -1,0 +1,25 @@
+[package]
+edition = "2021"
+name = "bike-baker"
+version = "0.1.0"
+authors = ["Ulf Lilleengen <lulf@redhat.com>"]
+resolver = "2"
+
+[dependencies]
+defmt = "0.3"
+defmt-rtt = "0.3"
+panic-probe = { version = "0.3", features = ["print-defmt"] }
+
+drogue-device = { version = "0.1.0", default-features = false, features = ["defmt", "time", "bsp+microbit"] }
+cortex-m = { version = "0.7", features = ["inline-asm"] }
+cortex-m-rt = "0.7"
+
+embassy = { version = "0.1.0", default-features = false, features = ["defmt"] }
+embassy-nrf = { version = "0.1.0", default-features = false, features = ["nrf52833", "time-driver-rtc1", "gpiote"]}
+futures = { version = "0.3", default-features = false }
+
+[patch.crates-io]
+embassy = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
+embassy-nrf = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
+embassy-hal-common = { git = "https://github.com/embassy-rs/embassy.git", rev = "c8f3ec3fba47899b123d0a146e8f9b3808ea4601" }
+drogue-device = { git = "https://github.com/drogue-iot/drogue-device.git", rev = "06c339c9223bf7fa8c55eea2b12ec323849bdc79" }

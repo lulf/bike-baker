@@ -1,6 +1,14 @@
-# Drogue Device template
+# Bike-baker game
 
-This is a [cargo-generate](https://github.com/cargo-generate/cargo-generate) template for Drogue Device using the BBC:micro bit v2.
+This is a simple baking game for micro bit. The goal is to "bake" something based on user input,
+currently the button 'A'. Some chaos element is provided using the accelerometer, so that if you
+shake the device too much while hitting the button, progress will be slow. Once all LEDs on the
+matrix are lit, you have won.
+
+Controls:
+
+* Button 'A': Bake/make progress
+* Button 'B': Reset game
 
 ## Prerequisites
 
@@ -9,17 +17,7 @@ This is a [cargo-generate](https://github.com/cargo-generate/cargo-generate) tem
 * [probe-run](https://github.com/knurling-rs/probe-run) - `cargo install probe-run`
 
 
-## Generating the project
-
-Run the following command and enter the required values when prompted:
-
-```
-cargo generate --git https://github.com/drogue-iot/device-template
-```
-
-Once generated, go to the newly created project directory.
-
-## Running the example
+## Running the game
 
 Make sure your BBC micro:bit is connected and found by probe-run:
 
@@ -32,5 +30,3 @@ Then, run the application:
 ```
 cargo run --release
 ```
-
-Once running, press the 'A' button on the device to have the configured text scroll across the LED matrix.
